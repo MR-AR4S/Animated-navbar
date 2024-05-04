@@ -28,3 +28,30 @@ body {
   transform: translate(-50%, -50%); // adjustment to center
 }
 
+.container li {
+  list-style: none;
+  height: 70px;
+  width: 75px;
+  text-align: center;
+  font-size: 13px;
+  position: relative;
+  left: 15px;
+  cursor: pointer;
+
+  a {
+    text-decoration: none;
+    color: $text-color;
+    font-size: 25px;
+    position: relative;
+    top: 24px;
+    pointer-events: none;
+    transition: all .2s;
+  }
+
+  p {
+    font-size: 9px;
+    opacity: 0;
+    margin-top: 35px;
+    transition: all .2s;
+  }
+}
