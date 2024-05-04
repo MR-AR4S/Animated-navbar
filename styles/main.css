@@ -3,4 +3,21 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #8846ff;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  width: 400px;
+  background-color: #fff;
+  border-radius: 7px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }/*# sourceMappingURL=main.css.map */

@@ -1,9 +1,30 @@
 @import "./variable";
 
+@mixin flexDisplay {
+  display: flex;
+  align-items: center;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: $backgroundColor;
+}
+
+.container {
+  @include flexDisplay();
+  height: 80px;
+  width: 400px;
+  background-color: #fff;
+  border-radius: 7px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); // adjustment to center
 }
 
