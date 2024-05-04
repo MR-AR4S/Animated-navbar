@@ -39,11 +39,53 @@ body {
   position: relative;
   top: 24px;
   pointer-events: none;
-  transition: all 0.2s;
+  transition: all 0.3s;
 }
 .container li p {
   font-size: 9px;
   opacity: 0;
   margin-top: 35px;
   transition: all 0.2s;
+}
+
+.container .marker {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #8846ff;
+  position: absolute;
+  top: -17px;
+  left: 33px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+.container .marker::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border-top-right-radius: 20px;
+  position: absolute;
+  top: 42%;
+  left: -16px;
+  box-shadow: 0 -10px 0 0 #8846ff;
+}
+.container .marker::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border-top-left-radius: 20px;
+  position: absolute;
+  top: 42%;
+  right: -16.35px;
+  box-shadow: 0 -10px 0 0 #8846ff;
+}
+.container .marker .circle {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 100%;
 }/*# sourceMappingURL=main.css.map */

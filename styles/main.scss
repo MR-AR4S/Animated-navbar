@@ -5,6 +5,11 @@
   align-items: center;
 }
 
+@mixin circleSize($w , $h) {
+  width : $w;
+  height: $h;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -45,7 +50,7 @@ body {
     position: relative;
     top: 24px;
     pointer-events: none;
-    transition: all .2s;
+    transition: all .3s;
   }
 
   p {
@@ -53,5 +58,45 @@ body {
     opacity: 0;
     margin-top: 35px;
     transition: all .2s;
+  }
+}
+
+.container .marker {
+  @include circleSize(40px, 40px);
+  border-radius: 50%;
+  background-color: $backgroundColor;
+  position: absolute;
+  top: -17px;
+  left: 33px;
+  @include flexDisplay();
+  justify-content: center;
+  transition: all .3s;
+
+  &::before {
+    content: "";
+    @include circleSize(20px,20px);
+    background-color: transparent;
+    border-top-right-radius: 20px;
+    position: absolute;
+    top: 42%;
+    left: -16px;
+    box-shadow: 0 -10px 0 0 $backgroundColor;
+  }
+
+  &::after{
+    content: "";
+    @include circleSize(20px,20px);
+    background-color: transparent;
+    border-top-left-radius: 20px;
+    position: absolute;
+    top: 42%;
+    right: -16.35px;
+    box-shadow: 0 -10px 0 0 $backgroundColor;
+  }
+
+  .circle {
+    @include circleSize(20px, 20px );
+    background-color: #fff;
+    border-radius: 100%;
   }
 }
