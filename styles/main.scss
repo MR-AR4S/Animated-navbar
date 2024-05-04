@@ -42,6 +42,7 @@ body {
   position: relative;
   left: 15px;
   cursor: pointer;
+  }
 
   a {
     text-decoration: none;
@@ -59,7 +60,6 @@ body {
     margin-top: 35px;
     transition: all .2s;
   }
-}
 
 .container .marker {
   @include circleSize(40px, 40px);
@@ -99,4 +99,38 @@ body {
     background-color: #fff;
     border-radius: 100%;
   }
+}
+
+.container li.active a {
+  color: $backgroundColor;
+  font-size: 20px;
+  transition: all .2s;
+}
+
+.container li.active p {
+  opacity: 1;
+  margin-top: 20px;
+  color: $backgroundColor;
+  transition: all .2s;
+}
+
+.container li:nth-child(1).active ~ .marker {
+  left: 31px;
+  transition: all .3s;
+}
+.container li:nth-child(2).active ~ .marker {
+  left: 105px;
+  transition: all .3s;
+}
+.container li:nth-child(3).active ~ .marker {
+  left: 180px;
+  transition: all .3s;
+}
+.container li:nth-child(4).active ~ .marker {
+  left: 258px;
+  transition: all .3s;
+}
+.container li:nth-child(5).active ~ .marker {
+  left: 334px;
+  transition: all .3s;
 }
